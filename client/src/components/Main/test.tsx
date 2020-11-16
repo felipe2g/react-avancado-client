@@ -10,6 +10,11 @@ describe('<Main />', () => {
       .toBeInTheDocument
   })
 
+  it('should match the snapshot', () => {
+    const { container } = render(<Main />)
+    expect(container).toMatchSnapshot()
+  })
+
   it('should render the colors correctly', () => {
     const { container } = render(<Main />)
 
